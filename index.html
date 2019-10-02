@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors!</title>
 </head>
 
 <body>
+    <main>
+        <section class="game-section">
+            <h1>Rock, Paper, Scissors</h1>
+            <h2>Welcome to Rock, Paper Scissors! Simply choose your hand below and the press the play button. If you
+                need a reminder: rock > scissors, scissors > paper, and paper > rock. Play on!</h2>
+            <label>
+                Rock:
+                <input type="radio" value="rock" name="rps-game">
+            </label>
+            <label>
+                Paper:
+                <input type="radio" value="paper" name="rps-game">
+            </label>
+            <label>
+                Scissors:
+                <input type="radio" value="scissors" name="rps-game">
+            </label>
+            <button id="play-button">Play</button>
+        </section>
+        <section id="result-section" class="result-section">
+            <p<span id="result-of-game"></span></p>
+                <p>Number of Losses:<span id="number-of-loses"></span></p>
+        </section>
+        <section id="scoreboard-section" class="scoreboard-section">
+            <p>Number of Wins:<span id="number-of-wins"></span></p>
+            <p>Number of Losses:<span id="number-of-loses"></span></p>
+        </section>
+    </main>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
