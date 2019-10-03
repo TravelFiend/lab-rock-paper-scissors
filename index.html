@@ -15,31 +15,38 @@
             <h1>Rock, Paper, Scissors</h1>
             <h2>Welcome to Rock, Paper Scissors! Simply choose your hand below and the press the play button. If you
                 need a reminder: rock > scissors, scissors > paper, and paper > rock. Play on!</h2>
-            <label>
-                Rock:
-                <input type="radio" value="rock" name="rps-game" checked>
-            </label>
-            <label>
-                Paper:
-                <input type="radio" value="paper" name="rps-game">
-            </label>
-            <label>
-                Scissors:
-                <input type="radio" value="scissors" name="rps-game">
-            </label>
-            <button id="play-button">Play</button>
-            <button id="reset-button">Reset Game</button>
+            <form>
+                <label>
+                    <input type="radio" value="rock" name="rps-game" checked />
+                    <img class="hand-choice" src="assets/rock.png" alt="rock">
+                </label>
+                <label>
+                    <input type="radio" value="paper" name="rps-game" />
+                    <img class="hand-choice" src="assets/paper.png" alt="paper">         
+                </label>
+                <label>
+                    <input type="radio" value="scissors" name="rps-game" />
+                    <img class="hand-choice" src="assets/scissors.png" alt="scissors">
+                </label>
+            </form>
+            <section class="button-section">
+                <button class="play-button" id="play-button">Play</button>
+                <button class="reset-button" id="reset-button">Reset Game</button>
+            </section>
         </section>
         <section id="result-section" class="result-section">
-            <p><span id="result-of-game"></span></p>
-            <p>User Choice: <span id="user-choice"></span></p>
-            <p>Computer Choice: <span id="computer-choice"></span></p>
+            <p><b><span id="result-of-game">--</span></b></p>
+            <ul>
+                <li>User Choice: <b><span id="user-choice">--</span></b></li>
+                <li>Computer Choice: <b><span id="computer-choice">--</span></b></li>
+            </ul>
+            <ul>
+                <li>Number of Wins: <b><span id="number-of-wins"></span></b></li>
+                <li>Number of Losses: <b><span id="number-of-losses"></span></b></li>
+                <li>Number of Draws: <b><span id="number-of-draws"></span></b></li>
+            </ul>
         </section>
-        <section id="scoreboard-section" class="scoreboard-section">
-            <p>Number of Wins: <span id="number-of-wins"></span></p>
-            <p>Number of Losses: <span id="number-of-losses"></span></p>
-            <p>Number of Draws: <span id="number-of-draws"></span></p>
-        </section>
+        
     </main>
     <script type="module" src="src/app.js"></script>
 </body>

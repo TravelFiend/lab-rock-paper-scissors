@@ -22,9 +22,9 @@ const hardReset = () => {
   numOfWins = 0;
   numOfLosses = 0;
   numOfDraws = 0;
-  resultOfGame.textContent = '';
-  userChoiceSpan.textContent = '';
-  computerChoiceSpan.textContent = '';
+  resultOfGame.textContent = '--';
+  userChoiceSpan.textContent = '--';
+  computerChoiceSpan.textContent = '--';
   numOfWinsSpan.textContent = numOfWins;
   numOfLossesSpan.textContent = numOfLosses;
   numOfDrawsSpan.textContent = numOfDraws;
