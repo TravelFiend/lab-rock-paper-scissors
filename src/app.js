@@ -17,6 +17,12 @@ let numOfWins = 0;
 let numOfLosses = 0;
 let numOfDraws = 0;
 
+const updateSpans = () => {
+  numOfWinsSpan.textContent = numOfWins;
+  numOfLossesSpan.textContent = numOfLosses;
+  numOfDrawsSpan.textContent = numOfDraws;
+};
+
 // Function to reset game:
 const hardReset = () => {
   numOfWins = 0;
@@ -25,19 +31,17 @@ const hardReset = () => {
   resultOfGame.textContent = '--';
   userChoiceSpan.textContent = '--';
   computerChoiceSpan.textContent = '--';
-  numOfWinsSpan.textContent = numOfWins;
-  numOfLossesSpan.textContent = numOfLosses;
-  numOfDrawsSpan.textContent = numOfDraws;
+  updateSpans();
 };
 
 // Function that runs the RPS Game:
 const playTheHand = () => {
   // Sets user hand from DOM element selection:
-  const userSelectedHand = document.querySelector('input:checked');
-  const userHand = userSelectedHand.value;
+  const userHand = document.querySelector('input:checked').value;
 
   // Sets computer hand via getRandomThrow function:
   const computerHand = getRandomThrow();
+
   const result = checkResult(userHand, computerHand);
   
   // Check to see if the result is a win, loss, or draw:
@@ -57,10 +61,7 @@ const playTheHand = () => {
   computerChoiceSpan.textContent = computerHand.charAt(0).toUpperCase() + computerHand.slice(1);
 
   // Log the number of wins, losses, and draws to the DOM
-  numOfWinsSpan.textContent = numOfWins;
-  numOfLossesSpan.textContent = numOfLosses;
-  numOfDrawsSpan.textContent = numOfDraws;
-
+  updateSpans();
 
 };
 
